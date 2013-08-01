@@ -38,7 +38,7 @@ config/deploy.rb
     # path to the PID file after deployment  
     set :unicorn_pid, "#{current_path}/tmp/pids/unicorn.pid"  
 
-config/deploy/<unicorn config file>.rb  
+config/deploy/%unicorn config file%.rb  
 
     # this might be different for dev/test/prod, that's why  
     # it should be in the environment file  
