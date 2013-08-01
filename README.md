@@ -1,6 +1,8 @@
 # Cap::Uni
 
-TODO: Write a gem description
+Unicorn specific Capistrano tasks
+
+Tested with rails 4.0 and Capistrano 4.0
 
 ## Installation
 
@@ -18,7 +20,25 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Add the following to your project files:
+
+Capfile
+    require 'cap/uni/unicorn'
+    after :updated, 'unicorn:restart'
+
+config/deploy.rb
+    # full path to the unicorn binary after deployment
+    set :unicorn_binary, "/home/badger/.rbenv/shims/unicorn"
+    # or:
+    set :unicorn_binary, "#{current_path}/bin/unicorn"
+    
+    # path to the PID file after deployment
+    set :unicorn_pid, "#{current_path}/tmp/pids/unicorn.pid"
+
+config/deploy/<unicorn config file>.rb
+    # this might be different for dev/test/prod, that's why 
+    # it should be in the environment file 
+    set :unicorn_config, "#{current_path}/config/unicorn/production.rb"
 
 ## Contributing
 
