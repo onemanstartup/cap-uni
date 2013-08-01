@@ -22,9 +22,9 @@ Or install it yourself as:
 
 Add the following to your project files:
 
-Capfile 
-    require 'cap/uni/unicorn'
-    after :updated, 'unicorn:restart'
+Capfile  
+    require 'cap/uni/unicorn'  
+    after :updated, 'unicorn:restart'  
 
 config/deploy.rb 
     # full path to the unicorn binary after deployment 
