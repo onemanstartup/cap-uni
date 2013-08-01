@@ -29,6 +29,7 @@ Capfile
 
 
 config/deploy.rb  
+
     # full path to the unicorn binary after deployment  
     set :unicorn_binary, "/home/badger/.rbenv/shims/unicorn"  
     # or:  
@@ -38,6 +39,7 @@ config/deploy.rb
     set :unicorn_pid, "#{current_path}/tmp/pids/unicorn.pid"  
 
 config/deploy/<unicorn config file>.rb  
+
     # this might be different for dev/test/prod, that's why  
     # it should be in the environment file  
     set :unicorn_config, "#{current_path}/config/unicorn/production.rb"  
