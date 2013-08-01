@@ -1,10 +1,10 @@
-# Cap::Uni
+## Cap::Uni
 
 Unicorn specific Capistrano tasks
 
-Tested with rails 4.0 and Capistrano 4.0
+Tested with rails 4.0 and Capistrano 3.0
 
-## Installation
+### Installation
 
 Add this line to your application's Gemfile:
 
@@ -18,7 +18,7 @@ Or install it yourself as:
 
     $ gem install cap-uni
 
-## Usage
+### Usage
 
 Add the following to your project files:
 
@@ -44,7 +44,7 @@ config/deploy/%unicorn config file%.rb
     # it should be in the environment file  
     set :unicorn_config, "#{current_path}/config/unicorn/production.rb"  
 
-## Contributing
+### Contributing
 
 1. Fork it
 2. Create your feature branch (`git checkout -b my-new-feature`)
