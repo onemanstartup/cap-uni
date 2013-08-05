@@ -31,8 +31,6 @@ Capfile
 config/deploy.rb  
 
     # full path to the unicorn binary after deployment  
-    set :unicorn_binary, "/home/badger/.rbenv/shims/unicorn"  
-    # or:  
     set :unicorn_binary, "#{current_path}/bin/unicorn"  
     
     # path to the PID file after deployment  
