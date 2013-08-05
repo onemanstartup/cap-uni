@@ -9,7 +9,7 @@ namespace :unicorn do
   desc "Start Unicorn server"
   task :start do
     on roles(:all) do
-     execute "cd #{fetch(:current_path)}; bundle exec unicorn --gemfile #{fetch(:gemfile)} -c #{fetch(:unicorn_config)} -E #{fetch(:rails_env)} -D"
+     execute "cd #{current_path}; bundle exec unicorn -c #{fetch(:unicorn_config)} -E #{fetch(:rails_env)} -D"
     end
   end
 
