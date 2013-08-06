@@ -17,7 +17,7 @@ namespace :unicorn do
   desc "Kill Unicorn server"
   task :stop do
     on roles(:all) do
-      execute "if [ -S #{fetch(:unicorn_pid)} ]; then kill $(cat #{fetch(:unicorn_pid)}); fi"
+      execute "if [ -e #{fetch(:unicorn_pid)} ]; then kill $(cat #{fetch(:unicorn_pid)}); fi"
     end
   end
   
